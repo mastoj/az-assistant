@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SUB=$(az-activesub)
+
+az keyvault set-policy --name $1 --upn $2 --secret-permissions get list delete set --subscription "$SUB"

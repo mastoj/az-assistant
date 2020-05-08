@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+if [ $# -eq 0 ]
+    then
+        az keyvault list
+else
+    az keyvault list --subscription $1 -o table
+fi

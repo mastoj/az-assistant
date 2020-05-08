@@ -1,0 +1,4 @@
+#!/bin/bash
+
+SUB=$(az-activesub)
+az keyvault list --subscription $SUB -o table | grep -i $1
